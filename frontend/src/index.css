@@ -1,0 +1,174 @@
+/* Header style */
+.header {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1rem 0;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .menus {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.4
+}
+
+.menus span {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.container {
+  border: none !important;
+}
+
+.header .icons {
+  flex: 0.1;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  max-height: 316px;
+}
+
+.centered {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.42);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered .title {
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+}
+
+.centered .next {
+  font-size: 16px;
+  margin-top: -15px;
+}
+
+
+
+/* Footer CSS */
+.footer {
+  width: 100%;
+  bottom: 0;
+}
+
+.footer .footer-image {
+  width: 100%;
+  max-height: 250px;
+}
+
+
+/* Main Css */
+.product-card {
+  width: 100%;
+  max-width: 300px;
+  height: 450px;
+  background-color: #F4F5F7;
+  border-radius: 10px;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.title {
+  padding: 0px 16px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.subTitle {
+  font-size: 16px;
+  color: #898989;
+  font-weight: 400;
+  padding: 0px 16px;
+  margin-top: -20px;
+}
+
+.price {
+  padding: 0px 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pagination {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px
+}
+
+.pagination .page {
+  background-color: #F9F1E7;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.pagination .page.selected {
+  background-color: #B88E2F;
+  color: white;
+}
+
+.product-header{
+  background-color: #F9F1E7;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.verticalLine{
+  width: 2px;
+  height: 37px;
+  background-color: #9F9F9F;
+}
+
+.add-btn{
+  width: 202px;
+  height: 48px;
+  background-color: white;
+  border: none;
+  margin-left: 35px;
+}
+
+.edit{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
