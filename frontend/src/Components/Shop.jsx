@@ -8,6 +8,7 @@ import BiViewIcon from "../assets/bi_view.png";
 import Select from "react-select";
 import AddProduct from "./AddProduct";
 import { FaRegTrashAlt, FaPlusSquare } from "react-icons/fa";
+import { apiUrl } from "../Constant";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -25,7 +26,7 @@ const Shop = () => {
   const fetchProducts = async (page = 1) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/products?page=${page}&sort=${sort.value}&limit=${perPage.value}`
+        `${apiUrl}/products?page=${page}&sort=${sort.value}&limit=${perPage.value}`
       );
       setProducts(response.data);
       let pages = Array.from(Array(response.data.totalPages + 1).keys()).slice(

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { FaRegTrashAlt, FaPlusSquare } from "react-icons/fa";
+import { apiUrl } from "../Constant";
 
 const AddProduct = (props) => {
   const {
@@ -36,12 +37,12 @@ const AddProduct = (props) => {
 
     if (productId) {
       const response = await axios.put(
-        `http://localhost:5000/products/${productId}`,
+        `${apiUrl}/${productId}`,
         values
       );
     } else {
       const response = await axios.post(
-        `http://localhost:5000/products`,
+        `${apiUrl}/products`,
         values
       );
     }
@@ -55,7 +56,7 @@ const AddProduct = (props) => {
     const productId = values._id;
     if (!productId) return;
     const response = await axios.delete(
-      `http://localhost:5000/products/${productId}`
+      `${apiUrl}/products/${productId}`
     );
     setCurrentProductData(null);
     setShowAddProduct(false);

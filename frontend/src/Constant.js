@@ -1,0 +1,1 @@
+export const apiUrl = "https://nextgen-web-apis.onrender.com"

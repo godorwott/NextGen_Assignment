@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -8,15 +8,18 @@ const productRoutes = require("./routes/productRoutes");
 const { uploadData } = require("./config/data");
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, '../frontend/dist')));
+// app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 // Middleware
 app.use(express.json());
 
-
 // Connect to MongoDB
 connectDB();
 uploadData();
+
+app.get("/", (req, res) => {
+  return res.json({ status: "Server is working fine." });
+});
 
 // Routes
 app.use("/products", productRoutes);
