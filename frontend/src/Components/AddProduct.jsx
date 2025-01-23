@@ -37,7 +37,7 @@ const AddProduct = (props) => {
 
     if (productId) {
       const response = await axios.put(
-        `${apiUrl}/${productId}`,
+        `${apiUrl}/products/${productId}`,
         values
       );
     } else {
